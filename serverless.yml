@@ -1,17 +1,14 @@
-service: monorepotest
-# app and org for use with dashboard.serverless.com
-app: monorepotest
-org: phortonssf
+service: serverless-template 
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-stack-output
 
 provider:
   name: aws
   runtime: nodejs10.x
   stage: ${opt:stage, 'dev'}
   region: eu-west-1
-# For full config options, check the docs:
-#    docs.serverless.com
-service: serverless-template 
-
 
 custom:
   stage: ${opt:stage, 'dev'}
